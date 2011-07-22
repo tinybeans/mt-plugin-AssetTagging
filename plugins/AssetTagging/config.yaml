@@ -1,0 +1,14 @@
+name: Asset Tagging
+id:   AssetTagging
+key:  assettagging
+version: 0.1
+author_link: http://www.tinybeans.net/blog/
+author_name: Tomohiro Okuwaki
+l10n_class: AssetTagging::L10N
+description: <__trans phrase="Tagging the asset associated with the field.">
+callbacks:
+    MT::App::CMS::cms_pre_save.entry: $assettagging::AssetTagging::Callbacks::cms_pre_save_entry
+settings:
+    basename_tag:
+        default: 
+blog_config_template: blog_config.tmpl
